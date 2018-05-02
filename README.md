@@ -1,5 +1,7 @@
 # Netatalk in a Docker container for ARM devices
 
+[![Build Status](https://travis-ci.org/sipp11/docker-armv7-netatalk.svg?branch=master)](https://travis-ci.org/sipp11/docker-armv7-netatalk)
+
 This container targets single-board computers like Hardkernel Odroid-HC1, HC2 which works great as file server. This is serving [Apple Filing Protocol](https://en.wikipedia.org/wiki/Apple_Filing_Protocol) file sharing, Tracker (search/spotlight integration), and mDNS server for service discovery.
 
 Default configuration of [Netatalk] has two share called _Share_ which shares the containers `/media/share` and called _TimeMachine_ which shares the containers `/media/timemachine` mounting point. Host mounting a volume to this path will be the quickest way to start sharing files on your network.
