@@ -13,7 +13,7 @@ script:
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-    TAG=$(grep "ENV MYSQL_VERSION" Dockerfile | awk 'NF>1{print $NF}')
+    TAG=$(grep "ENV NETATALK_VERSION" Dockerfile | awk 'NF>1{print $NF}')
     docker tag sipp11/docker-armv7-netatalk sipp11/docker-armv7-netatalk:$TAG
     docker push sipp11/docker-armv7-netatalk:$TAG
     docker push sipp11/docker-armv7-netatalk
